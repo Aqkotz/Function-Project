@@ -34,7 +34,7 @@ for i in Xindex:
             maxes.append(xvalues[i])
         if slope(i) > slope(i-1) and slope(i) > slope(i+1):
             POIs.append(xvalues[i])
-        if slope(i) < slope(i-1) and slope(i) > slope(i+1):
+        if slope(i) < slope(i-1) and slope(i) < slope(i+1):
             POIs.append(xvalues[i])
 if yvalues[Res-1] < yvalues[Res-2]:
     mins.append(xvalues[Res-1])
