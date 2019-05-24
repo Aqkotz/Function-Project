@@ -25,6 +25,7 @@ POIs = []
 for i in Xindex:
     if i > 1 and i < Res-1:
         if yvalues[i] < yvalues[i-1] and yvalues[i] > yvalues[i+1]:
+            print (str(yvalues[i]+" "+str(yvalues[i-1])+" "+str(yvalues[i+1]))
             mins.append(xvalues[i])
         if yvalues[i] > yvalues[i-1] and yvalues[i] < yvalues[i+1]:
             maxes.append(xvalues[i])
@@ -33,5 +34,3 @@ for i in Xindex:
         if slope(i) < slope(i-1) and slope(i) > slope(i+1):
             POIs.append(xvalues[i])
 
-print (maxes)
-print (mins)
