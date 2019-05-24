@@ -34,3 +34,4 @@ for i in Xindex:
             POIs.append(xvalues[i])
 
 print (mins)
+print (maxes)
