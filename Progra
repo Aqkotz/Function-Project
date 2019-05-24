@@ -9,4 +9,6 @@ def f(x):
 Xvals = range(0,100)
 xvalues = []
 for i in Xvals:
-    i/100
+    xvalues.append((i/100)*math.pi*(1/2))
+    
+print (xvalues)
