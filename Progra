@@ -40,8 +40,8 @@ if yvalues[Res-1] < yvalues[Res-2]:
     mins.append(xvalues[Res-1])
 else:
     maxes.append(xvalues[Res-1])
-absmin = xvalues(yvalues.index(min(yvalues)))
-absmax = xvalues(yvalues.index(max(yvalues)))
+absmin = xvalues[yvalues.index(min(yvalues))]
+absmax = xvalues[yvalues.index(max(yvalues))]
 
 print ("mins:")
 print (mins)
