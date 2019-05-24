@@ -23,7 +23,7 @@ maxes = []
 mins = []
 POIs = []
 for i in Xindex:
-    if i > 1 and i < Res:
+    if i > 1 and i < Res-1:
         if yvalues[i] < yvalues[i-1] and yvalues[i] > yvalues[i+1]:
             mins.append(i)
         if yvalues[i] > yvalues[i-1] and yvalues[i] < yvalues[i+1]:
