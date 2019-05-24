@@ -6,12 +6,32 @@ import math
 def freddie(x):
     return (x*x*math.cos(x))
 
-Xvals = range(0,100)
+Res = 100
+Xindex = range(0,Res)
 xvalues = []
-for i in Xvals:
-    xvalues.append((i/100)*math.pi*(1/2))
+for i in Xindex:
+    xvalues.append((i/Res)*math.pi*(1/2))
 yvalues = []
 for i in xvalues:
     yvalues.append(freddie(i))
+    
+def slope(i):
+    return ((yvalues[i]-yvalues[i-1])/(xvalues[i]-xvalues[i-1]))
 
-print (yvalues)
+
+maxes = []
+mins = []
+POIs = []
+for i in Xindex:
+    if i > 1 and i < Res:
+        if yvalues[i] < yvalues[i-1] and yvalues[i] > yvalues[i+1]:
+            mins.append(i)
+        if yvalues[i] > yvalues[i-1] and yvalues[i] < yvalues[i+1]:
+            maxes.append(i)
+        if slope(i) > slope(i-1) and slope(i) < slope(i+1):
+            POIs.append(i)
+        if slope(i) < slope(i-1) and slope(i) > slope(i+1):
+            POIs.append(i)
+
+print (maxes)
+print (mins)
