@@ -3,12 +3,15 @@
 
 import math
 
-def f(x):
+def freddie(x):
     return (x*x*math.cos(x))
 
 Xvals = range(0,100)
 xvalues = []
 for i in Xvals:
     xvalues.append((i/100)*math.pi*(1/2))
-    
-print (xvalues)
+yvalues = []
+for i in xvalues:
+    yvalues.append(freddie(i))
+
+print (yvalues)
