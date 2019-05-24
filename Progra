@@ -41,6 +41,10 @@ if yvalues[Res-1] < yvalues[Res-2]:
 else:
     maxes.append(xvalues[Res-1])
 
+print ("mins:")
 print (mins)
+print ("maxes:")
 print (maxes)
+print ("POIs:")
+print (POIs)
 
