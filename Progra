@@ -1,0 +1,12 @@
+### Andy and Ian Calculus Project code
+###
+
+import math
+
+def f(x):
+    return (x*x*math.cos(x))
+
+Xvals = range(0,100)
+xvalues = []
+for i in Xvals:
+    i/100
