@@ -24,13 +24,13 @@ mins = []
 POIs = []
 for i in Xindex:
     if i > 1 and i < Res-1:
-        if yvalues[i] < yvalues[i-1] and yvalues[i] > yvalues[i+1]:
+        if yvalues[i] < yvalues[i-1] and yvalues[i] < yvalues[i+1]:
             mins.append(xvalues[i])
-            print (str(yvalues[i])+" "+str(yvalues[i-1])+" "+str(yvalues[i+1]))
-        if yvalues[i] > yvalues[i-1] and yvalues[i] < yvalues[i+1]:
+        if yvalues[i] > yvalues[i-1] and yvalues[i] > yvalues[i+1]:
             maxes.append(xvalues[i])
-        if slope(i) > slope(i-1) and slope(i) < slope(i+1):
+        if slope(i) > slope(i-1) and slope(i) > slope(i+1):
             POIs.append(xvalues[i])
         if slope(i) < slope(i-1) and slope(i) > slope(i+1):
             POIs.append(xvalues[i])
 
+print (mins)
