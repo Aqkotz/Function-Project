@@ -1,1 +1,37 @@
 
+import math
+
+
+def f(x):
+    return(x*x*math.cos(x))
+n = 16
+
+
+def trap(x):
+    trapsum = 0
+    for i in range (0,n):
+        g = f((i/n)/x)
+        if i != 0 and i != n-1:
+            trapsum += 2*g
+        else:
+            trapsum += g
+    trapsum /= 2
+    return (trapsum)
+
+
+def simp(x):
+    simpsum = 0
+    for i in range (0,n):
+        g = f((i/n)/x)
+        if i != 0 and i != n-1:
+            if (i/2)%1 == 0:
+                simpsum += 2*g
+            else:
+                simpsum += 4*g
+        else:
+            simpsum += g
+    simpsum /= 3
+    return (simpsum)
+    
+print (trap(1.57)/math.pi)
+print (simp(1.57)/math.pi)
